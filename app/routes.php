@@ -35,6 +35,7 @@ Route::get('admin/viewOrder/{any}',array('before' => 'auth' ,'uses'=>'OrderContr
 
 //POST Requests
 Route::post('login', array('before' => 'csrf','uses' => 'HomeController@doLogin'));
+Route::post('register', array('before' => 'csrf','uses'=> 'HomeController@doRegister'));
 Route::post('profile', array('before' => 'csrf','uses'=> 'HomeController@doProfile'));
 Route::post('orders', array('before' => 'csrf','uses'=> 'OrderController@doOrders'));
 Route::post('tickets', array('before' => 'csrf','uses'=> 'TicketController@doTickets'));
