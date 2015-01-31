@@ -287,7 +287,7 @@ class HomeController extends BaseController {
 			'email'    => 'required|email|unique:users',
 			'password' => 'required|min:6',
 			'password_again'=>'required|same:password',
-			'recaptcha_response_field' => 'required|recaptcha',
+			'g-recaptcha-response' => 'required|recaptcha',
 		);
 		
 		$validator = Validator::make(Input::all(), $rules);
